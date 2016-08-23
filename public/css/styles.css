@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url(/img/rock-and-smiling-cloud-game-background.png);
+}
+
+.bee {
+  position: absolute;
+}
+
+.bee header {
+  position: relative;
+  top: -.3em;
+  padding: .3em .8em;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: .2em;
+  box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+  color: white;
+  text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+  font-family: Verdana;
+  text-align: center;
+  opacity: .8;
+}
+
+.bee header:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffcb66;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  left: 33%;
+  bottom: -.3em;
+}
+
+.bee .body {
+  width: 128px;
+  height: 96px;
+  background-size: 128px 96px;
+}
+
+.mirror {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
+}
+
+
+.queen header {
+  background-color: red;
+}
+
+.queen header:after {
+  border-top: 5px solid red;
+}
+
+.worker header {
+  background-color: blue;
+}
+
+.worker header:after {
+  border-top: 5px solid blue;
+}
+
+.drone header {
+  background-color: green;
+}
+
+.drone header:after {
+  border-top: 5px solid green;
+}
+
+button {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  padding: .3em .8em;
+  border: 1px solid rgba(0,0,0,.1);
+  background: #58 linear-gradient(hsla(0,0%,100%,.3),transparent);
+  border-radius: .2em;
+  box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+  color: white;
+  text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+  font-size: 200%;
+  line-height: 1.5;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+button#shoot {
+  display: none;
+  background-color: #c00;
+}
+
+button#start {
+  background-color: #6b0;
+}
